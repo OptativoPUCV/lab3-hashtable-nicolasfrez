@@ -42,3 +42,27 @@ test.c:512: error: control reaches end of non-void function [-Werror=return-type
 cc1: all warnings being treated as errors
 Compilation failed
 cb7b6cd
+Thu 07 Sep 2023 04:53:00 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:57:56: error: expected ‘)’ before ‘;’ token
+   57 |   map->buckets = (Pair*) calloc(capacity, sizeof(Pair*);
+      |                                ~                       ^
+      |                                                        )
+hashmap.c:57:16: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   57 |   map->buckets = (Pair*) calloc(capacity, sizeof(Pair*);
+      |                ^
+hashmap.c:59:14: error: expected ‘;’ before ‘}’ token
+   59 |   return map;
+      |              ^
+      |              ;
+   60 | }
+      | ~             
+hashmap.c:60:1: error: control reaches end of non-void function [-Werror=return-type]
+   60 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+ab6f240
