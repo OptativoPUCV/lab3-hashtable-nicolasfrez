@@ -458,3 +458,9 @@ hashmap.c:89:13: error: ‘position’ undeclared (first use in this function)
 hashmap.c:89:13: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 30a9752
+Thu 07 Sep 2023 06:03:52 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  6|4
+total_score: 30/70
+ea57e8c
