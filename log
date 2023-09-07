@@ -209,3 +209,21 @@ hashmap.c:48:26: error: ‘newPair’ undeclared (first use in this function); d
 hashmap.c:48:26: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 0fd679c
+Thu 07 Sep 2023 05:17:18 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:28: error: request for member ‘capacity’ in something not a structure or union
+   44 |   int indice= hash(key, key->capacity)
+      |                            ^~
+hashmap.c:45:3: error: expected ‘,’ or ‘;’ before ‘Pair’
+   45 |   Pair* newPair = createPair(key, key->capacity);
+      |   ^~~~
+hashmap.c:47:3: error: ‘newPair’ undeclared (first use in this function); did you mean ‘Pair’?
+   47 |   newPair->next= map->buckets[indice];
+      |   ^~~~~~~
+      |   Pair
+hashmap.c:47:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a6216d5
