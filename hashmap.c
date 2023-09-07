@@ -40,7 +40,7 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) 
-{
+{/*
   int indice = hash(key, map->capacity);
   while(map->buckets[indice] != NULL || map->buckets[indice]->key!=NULL)
     {
@@ -49,7 +49,7 @@ void insertMap(HashMap * map, char * key, void * value)
         return;
       }
     }
-  indice = (indice + 1) % map->capacity;
+  indice = (indice + 1) % map->capacity; */
 
 }
 
