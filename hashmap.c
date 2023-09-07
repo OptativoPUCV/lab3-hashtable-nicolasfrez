@@ -89,7 +89,7 @@ Pair * searchMap(HashMap * map,  char * key)
         return map->buckets[indice];
       }
     }
-
+  return map->buckets[indice];
 }
 
 Pair * firstMap(HashMap * map) {
