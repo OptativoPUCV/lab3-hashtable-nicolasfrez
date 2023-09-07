@@ -447,3 +447,14 @@ Thu 07 Sep 2023 05:59:47 PM UTC:
  tests:  6|4
 total_score: 30/70
 e04dc5b
+Thu 07 Sep 2023 06:02:16 PM UTC: 
+ hashmap.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:89:13: error: ‘position’ undeclared (first use in this function)
+   89 |       if (++position >= map->capacity)
+      |             ^~~~~~~~
+hashmap.c:89:13: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+30a9752

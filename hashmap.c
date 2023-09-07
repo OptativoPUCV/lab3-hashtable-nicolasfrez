@@ -85,11 +85,10 @@ Pair * searchMap(HashMap * map,  char * key)
   while(map->buckets[indice]!=NULL || map->buckets[indice]->key!=NULL)
     {
       if(is_equal(map->buckets[indice]->key, key))
-      {
         return map->buckets[indice];
-      }
+      if (++position >= map->capacity)
+        position = 0;
     }
-  map->current = -1;
   return NULL;
 }
 
