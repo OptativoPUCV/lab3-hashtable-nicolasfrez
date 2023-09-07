@@ -51,7 +51,7 @@ void insertMap(HashMap * map, char * key, void * value)
       }
       indice = (indice + 1) % map->capacity; 
     }
-  map->buckets[indice] = createPair(_strdup(key), value);
+  map->buckets[indice] = createPair(strdup(key), value);
   map->size++;
   map->current = indice;
 
