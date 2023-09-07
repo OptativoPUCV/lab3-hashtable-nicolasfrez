@@ -252,3 +252,8 @@ hashmap.c:44:29: error: request for member ‘capacity’ in something not a str
       |                             ^~
 Compilation failed
 8086c1d
+Thu 07 Sep 2023 05:21:28 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+816403c
