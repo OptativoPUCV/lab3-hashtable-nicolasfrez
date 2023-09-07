@@ -51,6 +51,8 @@ void insertMap(HashMap * map, char * key, void * value)
       }
       indice = (indice + 1) % map->capacity; 
     }
+  map->size++;
+  map->current = indice;
 
 }
 
