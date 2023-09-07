@@ -84,7 +84,7 @@ Pair * searchMap(HashMap * map,  char * key)
   int indice = hash(key, map->capacity);
   while(map->buckets[indice]!=NULL || map->bucket[indice]->key!=NULL)
     {
-      if(is_equal(map->buckets[indice]->key, key))
+      if(is_equal(map->bucket[indice]->key, key))
       {
         return map->buckets[indice];
       }
