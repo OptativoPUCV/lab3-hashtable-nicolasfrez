@@ -91,7 +91,6 @@ Pair * searchMap(HashMap * map,  char * key)
       }
       indice = (indice + 1) % map->capacity;
     }
-  map->current=-1;
   return NULL;
 }
 
