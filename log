@@ -242,3 +242,13 @@ hashmap.c:47:19: error: ‘maps’ undeclared (first use in this function); did 
 hashmap.c:47:19: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 a966384
+Thu 07 Sep 2023 05:21:04 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:29: error: request for member ‘capacity’ in something not a structure or union
+   44 |   int indice = hash(key, key->capacity);
+      |                             ^~
+Compilation failed
+8086c1d
