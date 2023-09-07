@@ -95,3 +95,27 @@ Thu 07 Sep 2023 05:00:38 PM UTC:
  tests:  1|5
 total_score: 10/70
 de2230f
+Thu 07 Sep 2023 05:09:47 PM UTC: 
+ hashmap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:44:3: error: ‘indice’ undeclared (first use in this function)
+   44 |   indice= hash(key, key->capacity)
+      |   ^~~~~~
+hashmap.c:44:3: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:44:24: error: request for member ‘capacity’ in something not a structure or union
+   44 |   indice= hash(key, key->capacity)
+      |                        ^~
+hashmap.c:44:35: error: expected ‘;’ before ‘Pair’
+   44 |   indice= hash(key, key->capacity)
+      |                                   ^
+      |                                   ;
+   45 |   Pair newPair = createPair(key, key->capacity);
+      |   ~~~~                             
+hashmap.c:47:3: error: ‘newPair’ undeclared (first use in this function); did you mean ‘Pair’?
+   47 |   newPair->next= map->buckets[indice];
+      |   ^~~~~~~
+      |   Pair
+Compilation failed
+54e9d6c
