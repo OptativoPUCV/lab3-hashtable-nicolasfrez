@@ -341,3 +341,13 @@ Thu 07 Sep 2023 05:40:58 PM UTC:
  tests:  5|4
 total_score: 30/70
 5bf6eab
+Thu 07 Sep 2023 05:47:00 PM UTC: 
+ hashmap.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:5: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘return’
+   86 |     return NULL;
+      |     ^~~~~~
+Compilation failed
+ddf717b
