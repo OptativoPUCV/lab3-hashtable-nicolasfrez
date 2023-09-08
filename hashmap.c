@@ -73,7 +73,7 @@ void enlarge(HashMap * map)
         free(oldBuckets[i]);
       }
     }
-  
+  free(oldBuckets);
   
   
   
