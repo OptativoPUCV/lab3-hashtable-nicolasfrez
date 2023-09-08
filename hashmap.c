@@ -123,7 +123,7 @@ Pair * nextMap(HashMap * map)
   if(map->current == -1)
     return NULL;
   
-  for(int i = map->current ; i < map->capacity ; i++)
+  for(int i = map->current + 1 ; i < map->capacity ; i++)
     {
       if(map->buckets[i]!= NULL && map->buckets[i]->key != NULL)
       {
