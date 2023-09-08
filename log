@@ -780,3 +780,31 @@ Fri 08 Sep 2023 07:37:28 PM UTC:
  tests:  16|1
 total_score: 60/70
 5c3caf9
+Fri 08 Sep 2023 08:12:23 PM UTC: 
+ hashmap.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:22: error: initialization of ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   62 |   Pair* oldBuckets = map->buckets;
+      |                      ^~~
+hashmap.c:64:16: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   64 |   map->buckets = (Pair*)calloc(map->capacity, sizeof(Pair*));
+      |                ^
+hashmap.c:69:24: error: invalid operands to binary != (have ‘Pair’ and ‘void *’)
+   69 |       if(oldBuckets[i] != NULL && oldBuckets[i]->key != NULL)
+      |          ~~~~~~~~~~~~~ ^~
+      |                    |
+      |                    Pair
+hashmap.c:69:48: error: invalid type argument of ‘->’ (have ‘Pair’)
+   69 |       if(oldBuckets[i] != NULL && oldBuckets[i]->key != NULL)
+      |                                                ^~
+hashmap.c:71:37: error: invalid type argument of ‘->’ (have ‘Pair’)
+   71 |         insertMap(map, oldBuckets[i]->key , oldBuckets[i]->value);
+      |                                     ^~
+hashmap.c:71:58: error: invalid type argument of ‘->’ (have ‘Pair’)
+   71 |         insertMap(map, oldBuckets[i]->key , oldBuckets[i]->value);
+      |                                                          ^~
+cc1: all warnings being treated as errors
+Compilation failed
+03f67ae
