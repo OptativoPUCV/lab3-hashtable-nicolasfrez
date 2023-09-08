@@ -83,7 +83,8 @@ void eraseMap(HashMap * map,  char * key)
     {
       free(map->buckets[indice]->key);
       map->buckets[indice]->key = NULL;
-      
+
+      return;
     }
 
 }
