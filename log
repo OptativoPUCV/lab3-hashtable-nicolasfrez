@@ -680,3 +680,9 @@ Fri 08 Sep 2023 07:11:22 PM UTC:
  tests:  10|3
 total_score: 40/70
 1028c4e
+Fri 08 Sep 2023 07:16:10 PM UTC: 
+ hashmap.c | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+ tests:  10|3
+total_score: 40/70
+cbdfebe
