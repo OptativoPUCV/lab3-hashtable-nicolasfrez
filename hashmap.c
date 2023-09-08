@@ -70,6 +70,7 @@ void enlarge(HashMap * map)
       {
         insertMap(map, oldBuckets[i]->key , oldBuckets[i]->value);   
         free(oldBuckets[i]->key);
+        free(oldBuckets[i]);
       }
     }
   
