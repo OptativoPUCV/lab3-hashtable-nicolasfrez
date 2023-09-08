@@ -77,7 +77,7 @@ void enlarge(HashMap * map)
   
   
   
-  enlarge_called = 1; //no borrar (testing purposes)
+ // enlarge_called = 1; //no borrar (testing purposes)
 
 
 }
