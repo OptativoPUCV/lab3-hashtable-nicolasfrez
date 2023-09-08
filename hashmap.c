@@ -59,7 +59,7 @@ void insertMap(HashMap * map, char * key, void * value)
 
 void enlarge(HashMap * map) 
 {
-  Pair* oldBuckets = map->buckets;
+  Pair** oldBuckets = map->buckets;
   map->capacity *= 2;
   map->buckets = (Pair*)calloc(map->capacity, sizeof(Pair*));
   map->size=0;
